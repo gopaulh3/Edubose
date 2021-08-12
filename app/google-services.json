@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "973251418653",
+    "firebase_url": "https://edubose-b3411.firebaseio.com",
+    "project_id": "edubose-b3411",
+    "storage_bucket": "edubose-b3411.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973251418653:android:9d1439724036ff6a5504f4",
+        "android_client_info": {
+          "package_name": "com.example.edubose"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973251418653-f5kdqohiucrdg8cdv0954im6sjb0ap7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edubose",
+            "certificate_hash": "4eec6c126baad55705fdcd021b003ec6738150b5"
+          }
+        },
+        {
+          "client_id": "973251418653-lv829kio2taqosdd2enjl7immt94gnid.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWvuuV_E4yIAsAsvK6tIxb9wXJS5ZkghA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973251418653-lv829kio2taqosdd2enjl7immt94gnid.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

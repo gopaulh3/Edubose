@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorSecondPrimaryDark"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Topic Name"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/question_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Time(s)"
+                android:textAlignment="textStart"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/question_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:text="30"
+                android:textAlignment="textStart"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/question_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:onClick="onClick"
+                android:src="@drawable/ic_add" />
+
+            <ImageView
+                android:id="@+id/question_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@id/question_minus"
+                android:onClick="onClick"
+                android:src="@drawable/ic_minus" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/digits_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Difficulty"
+                android:textAlignment="textStart"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/digits_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="start"
+                android:layout_marginStart="20dp"
+                android:text="Easy"
+                android:textAlignment="textStart"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/digits_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:onClick="digit_plus"
+                android:src="@drawable/ic_add" />
+
+            <ImageView
+                android:id="@+id/digits_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@id/digits_minus"
+                android:onClick="digit_minus"
+                android:src="@drawable/ic_minus" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#fff"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/formation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:text="vs"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/formation_first_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@id/formation_text"
+                android:onClick="formation_first_minus"
+                android:src="@drawable/ic_minus" />
+
+            <ImageView
+                android:id="@+id/formation_first_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/formation_first_minus"
+                android:onClick="formation_first_plus"
+                android:src="@drawable/ic_add" />
+
+            <TextView
+                android:id="@+id/digit_first_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="1"
+                android:layout_marginEnd="10dp"
+                android:textAlignment="center"
+                android:layout_toStartOf="@id/formation_text"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/digit_second_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="0"
+                android:layout_marginStart="10dp"
+                android:textAlignment="center"
+                android:layout_toEndOf="@id/formation_text"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+
+            <ImageView
+                android:id="@+id/formation_second_minus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:onClick="formation_second_minus"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_add" />
+
+            <ImageView
+                android:id="@+id/formatino_second_plus"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:onClick="formation_second_plus"
+                android:layout_toStartOf="@id/formation_second_minus"
+                android:src="@drawable/ic_minus" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/dialog_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center_vertical"
+            android:text="OK"
+            android:textAlignment="center" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

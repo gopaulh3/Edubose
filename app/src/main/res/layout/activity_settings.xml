@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/backgroundFragment"
+    tools:context=".SettingsActivity">
+
+    <include
+        layout="@layout/app_bar_layout"
+        android:id="@+id/settings_toolbar">
+    </include>
+
+    <LinearLayout
+        android:id="@+id/contact_item_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_toolbar"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginEnd="15dp"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/new_users_profile_image"
+            android:layout_width="85dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/profile_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/new_user_profile_name"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="0dp"
+                    android:text="user name"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="#fff"
+                    android:textAlignment="textStart"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/new_user_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:hint="user number"
+                android:textColor="#fff"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/settings_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_below="@id/contact_item_id"
+        android:layout_marginTop="10dp">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/saveChanges"
+        style="@style/loginButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/settings_list_view"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-28dp"
+        android:layout_marginBottom="10dp"
+        android:padding="4dp"
+        android:text="Save Changes"
+        android:textSize="12sp" />
+
+</RelativeLayout>
